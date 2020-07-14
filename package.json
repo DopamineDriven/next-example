@@ -1,0 +1,27 @@
+{
+	"name": "next-example",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/DopamineDriven/next-example.git",
+	"author": "Andrew Ross <andrew.simpson.ross@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"date-fns": "^2.14.0",
+		"fs": "^0.0.1-security",
+		"gray-matter": "^4.0.2",
+		"next": "^9.4.4",
+		"path": "^0.12.7",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"remark": "^12.0.0",
+		"remark-html": "^11.0.2"
+	},
+	"devDependencies": {
+		"typescript": "^3.9.6"
+	}
+}
