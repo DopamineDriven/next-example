@@ -57,3 +57,13 @@ export async function getStaticProps({ params }) {
 }
 ```
 - image: https://nextjs.org/static/images/learn/dynamic-routes/how-to-dynamic-routes.png
+
+---
+
+## Linking dynamically routed pages
+- Use `[id]` for the `href` and the actual path `/posts/ssg-ssr` or `/posts/pre-rendering` for the `as` prop
+```tsx
+<Link href="/posts/[id]" as={`/posts/${id}`}>
+    <a>{title}</a>
+</Link>
+```
