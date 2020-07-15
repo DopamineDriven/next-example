@@ -1,6 +1,5 @@
+import React from "react";
 import Head from "next/head";
-import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Andrew Ross";
@@ -14,7 +13,7 @@ export default function Layout({
 	home?: boolean;
 }) {
 	return (
-		<div className={styles.container}>
+		<div style={styles.container}>
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
 				<meta
@@ -30,15 +29,15 @@ export default function Layout({
 				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
-			<header className={styles.header}>
+			<header style={styles.header}>
 				{home ? (
 					<>
 						<img
 							src="/images/pp.png"
-							className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+							style={styles.headerHomeImage}
 							alt={name}
 						/>
-						<h1 className={utilStyles.heading2Xl}>{name}</h1>
+						<h1 style={styles.heading2Xl}>{name}</h1>
 					</>
 				) : (
 					<>
@@ -46,14 +45,14 @@ export default function Layout({
 							<a>
 								<img
 									src="/images/pp.png"
-									className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+									style={styles.headerImage}
 									alt={name}
 								/>
 							</a>
 						</Link>
-						<h2 className={utilStyles.headingLg}>
+						<h2 style={styles.headingLg}>
 							<Link href="/">
-								<a className={utilStyles.colorInherit}>{name}</a>
+								<a style={styles.colorInherit}>{name}</a>
 							</Link>
 						</h2>
 					</>
@@ -61,7 +60,7 @@ export default function Layout({
 			</header>
 			<main>{children}</main>
 			{!home && (
-				<div className={styles.backToHome}>
+				<div style={styles.backToHome}>
 					<Link href="/">
 						<a>&larr; Back to home</a>
 					</Link>
@@ -70,3 +69,73 @@ export default function Layout({
 		</div>
 	);
 }
+
+const styles: { [k: string]: React.CSSProperties } = {
+	heading2X1: {
+		fontSize: "2.5rem",
+		lineHeight: 1.2,
+		fontWeight: 800,
+		letterSpacing: "-0.05rem",
+		margin: "1rem 0"
+	},
+	headingLg: {
+		fontSize: "1.5rem",
+		lineHeight: 1.4,
+		margin: "1rem 0"
+	},
+	colorInherit: {
+		color: "inherit"
+	},
+	container: {
+		maxWidth: "36rem",
+		padding: "0 1rem",
+		margin: "3rem auto 6rem"
+	},
+	header: {
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center"
+	},
+	headerImage: {
+		width: "6rem",
+		height: "6rem",
+		borderRadius: "9999px"
+	},
+	headerHomeImage: {
+		width: "8rem",
+		height: "8rem",
+		borderRadius: "9999px"
+	},
+	backToHome: {
+		margin: "3rem 0 0"
+	}
+};
+
+/*
+.container {
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerImage {
+  width: 6rem;
+  height: 6rem;
+}
+
+.headerHomeImage {
+  width: 8rem;
+  height: 8rem;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+*/

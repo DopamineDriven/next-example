@@ -1,8 +1,8 @@
+import React from "react";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "Next/Head";
 import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
 
 export default function Post({
@@ -20,8 +20,8 @@ export default function Post({
 				<title>{postData.title}</title>
 			</Head>
 			<article>
-				<h1 className={utilStyles.headingX1}>{postData.title}</h1>
-				<div className={utilStyles.lightText}>
+				<h1 style={styles.h1}>{postData.title}</h1>
+				<div style={styles.lightText}>
 					<Date dateString={postData.date} />
 				</div>
 				<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
@@ -52,3 +52,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 The array of possible values for id must be the value of the paths key of the returned object. 
 This is exactly what getAllPostIds() returns.
 */
+
+const styles: { [k: string]: React.CSSProperties } = {
+	h1: {
+		fontSize: "2rem",
+		lineHeight: 1.3,
+		fontWeight: 800,
+		letterSpacing: "-0.05rem",
+		margin: "1rem 0"
+	},
+	lightText: {
+		color: "#666"
+	}
+};
