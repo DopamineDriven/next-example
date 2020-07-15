@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 const name = "Andrew Ross";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Nextjs SSG-SSR";
 
 export default function Layout({
 	children,
@@ -18,7 +18,7 @@ export default function Layout({
 				<link rel="icon" href="/favicon.ico" />
 				<meta
 					name="description"
-					content="Learn how to build a personal website using Next.js"
+					content="Learn about SSG-SSR and pre-rendering"
 				/>
 				<meta
 					property="og:image"
