@@ -1,5 +1,5 @@
 # next-example
-
+- consider incorporating ant-design and making this a portfolio (7/15/20)
 ----
 
 ## Statically Generate Pages with Dynamic Routes
