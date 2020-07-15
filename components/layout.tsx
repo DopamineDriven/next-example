@@ -24,7 +24,7 @@ export default function Layout({
 					property="og:image"
 					content={`https://og-image.now.sh/${encodeURI(
 						siteTitle
-					)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+					)}***%F0%9F%90%9CBUILD%F0%9F%90%9C***.png?theme=dark&md=1&fontSize=175px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-white-logo.svg&images=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fremojansen%2Flogo.ts%40master%2Fts.svg&widths=auto&heights=350&heights=350`}
 				/>
 				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
@@ -112,6 +112,7 @@ const styles: { [k: string]: React.CSSProperties } = {
 };
 
 /*
+https://og-image.now.sh/***%F0%9F%90%9CBUILD%F0%9F%90%9C***.png?theme=dark&md=1&fontSize=175px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-white-logo.svg&images=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fremojansen%2Flogo.ts%40master%2Fts.svg&widths=auto&heights=350&heights=350
 .container {
   max-width: 36rem;
   padding: 0 1rem;

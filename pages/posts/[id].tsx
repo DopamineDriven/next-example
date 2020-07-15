@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import Head from "Next/Head";
+import Head from "next/head";
 import Date from "../../components/date";
 import { GetStaticProps, GetStaticPaths } from "next";
 
@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		paths,
 		fallback: false
 	};
-}
+};
 
 // updated to async after adding remark and remark-html in lib/posts
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			postData
 		}
 	};
-}
+};
 
 /*
 The array of possible values for id must be the value of the paths key of the returned object. 

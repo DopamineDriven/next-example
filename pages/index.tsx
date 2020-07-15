@@ -65,8 +65,7 @@ const styles: { [k: string]: React.CSSProperties } = {
 	},
 	headingMd: {
 		fontSize: "1.2rem",
-		lineHeight: 1.5,
-		paddingLeft: "8.75em"
+		lineHeight: 1.5
 	},
 	list: {
 		listStyle: "none",
